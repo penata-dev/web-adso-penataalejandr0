@@ -1,0 +1,54 @@
+/* General */
+* {
+    text-align: center;
+    background-color: rgb(249, 249, 217);
+    padding: 2px;
+}
+
+/* Parte del Header */
+header a{
+    text-decoration: none;
+    color: brown;
+}
+
+/* h1, h2 Agrupados */
+h1, h2 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    color: #1f1f1f;
+}
+
+/* Separacion con lineas de hr */
+hr {
+    background-color: #c4cdd5;
+    border-color: #bd8383;
+    border-radius: 50px;
+    height: 3px;
+}
+
+/* Style de la clase foto */
+.foto {
+    border-style: groove;
+    border-color: black;
+}
+
+/* Style de body */
+body  {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+/* ul, ol listas */
+ul, ol {
+    list-style: none;
+}
+
+b {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #ff0000;
+    
+}
