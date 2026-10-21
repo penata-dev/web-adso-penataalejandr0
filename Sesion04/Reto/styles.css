@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 3rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f2f4f7;
+  color: #1f2933;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 1. Tarjeta centrada con max-width, margin: auto, padding, bordes redondeados y sombra */
+.tarjeta {
+  max-width: 380px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  border: 1px solid #e4e7eb;
+  border-radius: 1.25rem;
+  background-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 2. Avatar circular */
+.avatar {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 1.25rem;
+  border-radius: 50%;
+  background-color: #e3e5d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  line-height: 1;
+  transition: background-color 0.3s ease;
+}
+
+#nombre {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1f2933;
+}
+
+.rol {
+  margin: 0.35rem 0;
+  color: #2e7d00;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.ciudad {
+  margin: 0 0 1.5rem;
+  color: #52606d;
+  font-size: 0.95rem;
+}
+
+h2 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+  margin-bottom: 0.75rem;
+  color: #3e4c59;
+}
+
+/* 2. Habilidades como etiquetas en fila con display: inline-block */
+.habilidades {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.habilidades li {
+  display: inline-block;
+  margin: 0.3rem 0.25rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background-color: #e2f5d8;
+  color: #1f5c00;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 3. Botón con cambio de color en :hover y borde visible en :focus-visible */
+.boton {
+  display: inline-block;
+  padding: 0.75rem 1.4rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background-color: #2e7d00;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease, outline-color 0.2s ease;
+}
+
+.boton:hover {
+  background-color: #1f5c00;
+}
+
+.boton:focus-visible {
+  outline: 3px solid #1f5c00;
+  outline-offset: 3px;
+}
+
+/* 4. Modo oscuro: body.oscuro cambia fondo, tarjeta, textos y etiquetas */
+body.oscuro {
+  background-color: #111827;
+  color: #f3f4f6;
+}
+
+body.oscuro .tarjeta {
+  background-color: #1f2937;
+  border-color: #374151;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+}
+
+body.oscuro #nombre {
+  color: #ffffff;
+}
+
+body.oscuro .rol {
+  color: #86efac;
+}
+
+body.oscuro .ciudad {
+  color: #9ca3af;
+}
+
+body.oscuro h2 {
+  color: #e5e7eb;
+}
+
+body.oscuro .avatar {
+  background-color: #374151;
+}
+
+body.oscuro .habilidades li {
+  background-color: #374151;
+  color: #d1fae5;
+  border: 1px solid #4b5563;
+}
+
+body.oscuro .boton {
+  background-color: #22c55e;
+  color: #0f172a;
+}
+
+body.oscuro .boton:hover {
+  background-color: #16a34a;
+}
+
+body.oscuro .boton:focus-visible {
+  outline: 3px solid #86efac;
+  outline-offset: 3px;
+}
