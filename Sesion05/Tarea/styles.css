@@ -1,0 +1,156 @@
+* {
+  text-align: center;
+  background-color: #64533f;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFB74D;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2 {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #F5E6D3;
+}
+
+p {
+  font-family: cursive, sans-serif;
+}
+
+ul {
+    list-style: none;
+    font-family: cursive, sans-serif;
+}
+
+.color {
+    color: #f79502;
+}
+
+table, td, th {
+    width: 50%;
+    border-collapse: collapse;
+    border: 2px solid #cec8bf;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+tbody {
+    color:wheat;
+    font-family: cursive, sans-serif;
+}
+.font {
+    color: #bcbca3;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#font-color {
+    color: #3d2807;
+    font-family: Cochin, Georgia, Times, serif   ;  
+}
+
+td a {
+    text-decoration: none;
+    color: #FFB74D;
+    font-family: 'Courier New', Courier, monospace;   
+}
+
+img {
+    border-style:solid;
+    color:#f79502 ;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #FFB74D ;
+}
+
+.boton:hover {
+    background-color: #c99b07;
+}
+
+.boton {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+    border: 2px solid #1f2933;
+    border-radius: 8px;
+    background-color:  #f79502;
+    color: #000000;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.error {
+    display: block;
+    min-height: 1.2em;
+    color: #c62828;
+    font-size: 0.85rem;
+}
+
+input:user-invalid, select:user-invalid, textarea:user-invalid {
+    border-color: #c62828;
+    background-color:#fffdf5;
+}
+
+.opcion input {
+    width: auto;
+    margin-right: 0.35rem;
+}
+
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 3px solid #ffb300;
+    outline-offset: 2px;
+    border-color: #2e7d00;
+}
+
+.opcion {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+input,
+select,
+textarea {
+    width: 85%;
+    padding: 0.6rem 0.75rem;
+    border: 2px solid #cbd2d9;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.formulario {
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 16px;
+    background-color: #64533f;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16);
+    min-width: 300px;
+}
+
+fieldset {
+    margin: 0 0 1.5rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid #64533f;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+legend {
+    padding: 0 0.5rem;
+    font-weight: 600;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #F5E6D3;;
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
