@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #fcf9f2;
+    color: #2c2c2c;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 5%;
+    background-color: #5c1d24;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #d4af37;
+}
+
+.menu {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #d4af37;
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+main h1 {
+    text-align: center;
+    color: #5c1d24;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.vitrina {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+.producto {
+    flex: 1 1 250px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.producto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: #f0f0f0;
+}
+
+.badge-agotado {
+    right: 12px;
+    background-color: #c0392b;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+}
+
+.producto-agotado .etiqueta {
+    background-color: #f3f4f6;
+    color: #6b7280;
+}
+
+.producto:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.25rem;
+}
+
+.etiqueta {
+    align-self: flex-start;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    background-color: rgba(92, 29, 36, 0.08);
+    font-size: 0.75rem;
+    color: #5c1d24;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info h3 { 
+    margin: 0;
+    font-size: 1.2rem;
+    color: #3f1217;
+}
+
+.precio {
+    margin: auto 0 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #5c1d24;
+}
+
+.pie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 3rem 5% 1.5rem 5%;
+    background-color: #3f1217;
+    color: #e5e7eb;
+    margin-top: 3rem;
+    border-top: 4px solid #d4af37;
+}
+
+.pie section { 
+    flex: 1 1 250px; 
+}
+
+.pie h3 {
+    color: #d4af37;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.pie p {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.95rem;
+    color: #dcdcdc;
+}
+
+.pie a { 
+    color: #d4af37; 
+    text-decoration: none;
+}
+
+.pie a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+    color: #cccccc;
+}
