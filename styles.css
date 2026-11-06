@@ -1,5 +1,11 @@
+/*  
+Para mí, Mobile First significa que primero diseño y programo la vista para pantallas pequeñas (celulares) 
+usando los estilos base, y luego voy adaptando o escalando mi diseño para pantallas más grandes 
+(tablets o computadores) utilizando "media queries" con "min-width". Básicamente, construyo desde lo 
+más pequeño hacia lo más grande para asegurar que mi sitio tenga un mejor rendimiento.
+*/
 
-* {
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -85,7 +91,7 @@ body {
 
 .grid-retos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.75rem;
 }
 
@@ -184,4 +190,10 @@ body {
   border-top: 1px solid #e2e8f0;
   color: #64748b;
   font-size: 0.85rem;
+}
+
+@media (min-width: 768px) {
+  .grid-retos {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
