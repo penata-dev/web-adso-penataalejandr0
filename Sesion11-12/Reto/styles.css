@@ -1,0 +1,419 @@
+/*
+    CONCEPTO: MOBILE FIRST
+    ¿Qué es Mobile First?
+    Es una técnica de diseño web donde escribimos primero los estilos para pantallas
+    pequeñas (celulares) como base principal sin ninguna condición. Después,
+    usando reglas @media con 'min-width', vamos ampliando y adaptando los estilos
+    progresivamente para pantallas más grandes como tabletas y computadores.
+ */
+
+:root {
+    --fondo: #120e0b;
+    --superficie: #1c1511;
+    --tarjeta: #241c16;
+    --borde: #3b281c;
+    --texto: #f4efe6;
+    --texto-suave: #baa999;
+    --acento: #d97706;
+    --dorado: #fbbf24;
+    --whatsapp: #25d366;
+    --radio: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--dorado);
+    text-decoration: none;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    animation: aparecer 1s ease-out;
+}
+
+.seccion-espaciada {
+    padding: 3rem 0;
+}
+
+.seccion-titulo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.seccion-titulo h2 {
+    font-size: 1.8rem;
+    color: var(--dorado);
+}
+
+.seccion-titulo p {
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
+
+.encabezado {
+    background-color: var(--superficie);
+    border-bottom: 1px solid var(--borde);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    position: sticky;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--dorado);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    list-style: none;
+}
+
+.menu a {
+    color: var(--texto);
+    font-size: 0.95rem;
+    padding: 0.3rem 0.6rem;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    align-items: center;
+    animation: aparecer 1s ease-out;
+}
+
+.insignia-hero {
+    display: inline-block;
+    background-color: var(--tarjeta);
+    border: 1px solid var(--acento);
+    color: var(--dorado);
+    font-size: 0.85rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+}
+
+.frase-hero {
+    color: var(--texto-suave);
+    margin-bottom: 1.5rem;
+}
+
+.acciones-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.boton {
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.boton-whatsapp {
+    background-color: var(--whatsapp);
+    color: #fff;
+}
+
+.boton-secundario {
+    background-color: var(--tarjeta);
+    border: 1px solid var(--borde);
+    color: var(--texto);
+}
+
+.imagen-hero {
+    border-radius: var(--radio);
+    max-height: 320px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.beneficios, .grid-productos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.beneficio, .tarjeta-producto {
+    background-color: var(--tarjeta);
+    border: 1px solid var(--borde);
+    padding: 1.25rem;
+    border-radius: var(--radio);
+}
+
+.icono-beneficio {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.beneficio h3 {
+    color: var(--dorado);
+    margin-bottom: 0.35rem;
+}
+
+.beneficio p, .desc-producto {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+}
+
+#agotado {
+    background-color:var(--dorado);
+    border-radius: 5px;
+    padding: 0.5px 5px ;
+    border: solid rgba(255, 0, 0, 0.189);
+    position: absolute;
+    text-align: right;
+    width: 35%;
+    height: 30px;
+    top: 0.5rem;
+    right: 5px;
+    color: #0b0907;
+}
+
+#promoc {
+    color: var(--dorado);
+}
+
+.whatsapp-flotante {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 20;
+    display: grid;
+    place-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #ffffff;
+    font-size: 1.6rem;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+.tarjeta-producto {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.img-producto {
+    height: 140px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 0.75rem;
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+.caja-pedidos {
+    background-color: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    padding: 1.5rem;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.lista-pasos {
+    list-style: none;
+    counter-reset: paso;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.paso-item {
+    position: relative;
+    padding-left: 2.8rem;
+}
+
+.paso-item::before {
+    counter-increment: paso;
+    content: counter(paso);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--acento);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.paso-item strong {
+    color: var(--dorado);
+    display: block;
+}
+
+.paso-item p {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+}
+
+.pie-pagina {
+    background-color: #0b0907;
+    border-top: 1px solid var(--borde);
+    padding: 2.5rem 1rem 1.5rem;
+    margin-top: 2rem;
+}
+
+.footer-contenido {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-bloque h3 {
+    color: var(--dorado);
+    margin-bottom: 0.5rem;
+}
+
+.footer-bloque p, .lista-contacto li {
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+}
+
+.lista-contacto {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.footer-copy {
+    text-align: center;
+    border-top: 1px solid var(--borde);
+    padding-top: 1rem;
+    color: #71665a;
+    font-size: 0.8rem;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;                /* toda la pantalla */
+    z-index: 30;             /* encima de todo */
+    display: none;           /* escondida al inicio */
+    place-items: center;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: aparecer 0.3s ease-out;
+}
+
+.modal:target { display: grid; }   /* cuando la dirección termina en #promo */
+
+.modal-caja {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem;
+  border-radius: 16px;
+  background-color: var(--superficie);
+}
+
+.modal-cerrar {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.75rem;
+  font-size: 1.5rem;
+  color: var(--texto-suave);
+  text-decoration: none;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* Opcional: añade un leve deslizamiento */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) {
+    .encabezado {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    .menu {
+        flex-direction: row;
+        gap: 1.2rem;
+    }
+
+    .hero {
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+
+    .acciones-hero {
+        flex-direction: row;
+    }
+
+    .beneficios, .grid-productos, .footer-contenido {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .beneficios, .grid-productos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
