@@ -1,0 +1,119 @@
+:root {
+    --fondo: #120e0b;
+    --superficie: #1c1511;
+    --tarjeta: #241c16;
+    --borde: #3b281c;
+    --texto: #f4efe6;
+    --texto-suave: #baa999;
+    --acento: #d97706;
+    --acento-oscuro: #b45309;
+    --dorado: #fbbf24;
+    --whatsapp: #25d366;
+    --whatsapp-oscuro: #1ebe5d;
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+.bg-superficie {
+    background-color: var(--superficie);
+}
+
+.bg-tarjeta {
+    background-color: var(--tarjeta);
+}
+
+.bg-footer {
+    background-color: #0b0907;
+}
+
+.bg-acento {
+    background-color: var(--acento);
+    color: #fff;
+}
+
+.borde-marca {
+    border: 1px solid var(--borde);
+}
+
+.borde-inferior {
+    border-bottom: 1px solid var(--borde);
+}
+
+.borde-superior {
+    border-top: 1px solid var(--borde);
+}
+
+.texto-dorado {
+    color: var(--dorado);
+}
+
+.texto-suave {
+    color: var(--texto-suave);
+}
+
+.texto-copy {
+    color: #71665a;
+}
+
+.insignia-marca {
+    background-color: var(--tarjeta);
+    border: 1px solid var(--acento);
+    color: var(--dorado);
+}
+
+.imagen-hero {
+    max-height: 340px;
+    object-fit: cover;
+}
+
+.img-producto {
+    height: 140px;
+    object-fit: contain;
+}
+
+/* Botones de la marca usando variables --bs-btn-... */
+.btn-marca {
+    --bs-btn-color: #120e0b;
+    --bs-btn-bg: var(--dorado);
+    --bs-btn-border-color: var(--dorado);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--acento);
+    --bs-btn-hover-border-color: var(--acento);
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--acento-oscuro);
+    --bs-btn-active-border-color: var(--acento-oscuro);
+}
+
+.btn-whatsapp {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--whatsapp);
+    --bs-btn-border-color: var(--whatsapp);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--whatsapp-oscuro);
+    --bs-btn-hover-border-color: var(--whatsapp-oscuro);
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #179e4d;
+    --bs-btn-active-border-color: #179e4d;
+}
+
+.btn-secundario {
+    --bs-btn-color: var(--texto);
+    --bs-btn-bg: var(--tarjeta);
+    --bs-btn-border-color: var(--borde);
+    --bs-btn-hover-color: var(--dorado);
+    --bs-btn-hover-bg: var(--superficie);
+    --bs-btn-hover-border-color: var(--acento);
+    --bs-btn-active-color: var(--dorado);
+    --bs-btn-active-bg: var(--fondo);
+    --bs-btn-active-border-color: var(--dorado);
+}
+
+.form-control:focus {
+    background-color: var(--tarjeta);
+    border-color: var(--dorado);
+    box-shadow: 0 0 0 0.25rem rgba(251, 191, 36, 0.25);
+}

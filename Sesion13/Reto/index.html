@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantina Los Recuerdos de Ella - Manrique, Medellín</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-superficie borde-inferior sticky-top" aria-label="Navegación principal">
+            <div class="container py-1">
+                <a class="navbar-brand fw-bold texto-dorado" href="#hero">🍻 Cantina Los Recuerdos de Ella</a>
+                <button class="navbar-toggler borde-marca" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                        <li class="nav-item"><a class="nav-link" href="#hero">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#beneficios">Beneficios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#como-pedir">¿Cómo pedir?</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                            <button type="button" class="btn btn-marca btn-sm rounded-pill px-3" data-bs-toggle="modal" data-bs-target="#modalPromo">
+                                🔥 Promo de la noche
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container py-5" id="hero">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-md-6 text-center text-md-start">
+                    <span class="badge rounded-pill insignia-marca px-3 py-2 mb-3">📍 Manrique, Medellín</span>
+                    <h1 class="display-5 fw-bold mb-3">Cantina Los Recuerdos de Ella</h1>
+                    <p class="texto-suave mb-4">
+                        El rincón tradicional de Manrique donde los buenos momentos y los recuerdos se brindan con licores garantizados, cervezas al clima o bien frías, y la mejor atención de barrio.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row gap-2 justify-content-center justify-content-md-start">
+                        <a href="https://wa.me/573001234567" class="btn btn-whatsapp rounded-pill px-4 py-2 fw-semibold" target="_blank">
+                            💬 Pedir por WhatsApp
+                        </a>
+                        <a href="https://instagram.com/cantina_losrecuerdosdeella" class="btn btn-secundario rounded-pill px-4 py-2 fw-semibold" target="_blank">
+                            📸 Ver en Instagram
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80" alt="Ambiente tradicional de la Cantina Los Recuerdos de Ella" class="img-fluid rounded-4 imagen-hero w-100">
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5" id="beneficios">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold texto-dorado">¿Por qué elegirnos?</h2>
+                <p class="texto-suave">Nuestra cantina es punto de encuentro en la comuna con calidad y sabor auténtico.</p>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <article class="card h-100 bg-tarjeta borde-marca rounded-4">
+                        <div class="card-body">
+                            <div class="fs-2 mb-2">🧊</div>
+                            <h3 class="h5 card-title fw-semibold texto-dorado">Bebidas Bien Frías</h3>
+                            <p class="card-text texto-suave small">Cervezas y licores servidos a la temperatura perfecta para calmar la sed o disfrutar la noche.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card h-100 bg-tarjeta borde-marca rounded-4">
+                        <div class="card-body">
+                            <div class="fs-2 mb-2">🥃</div>
+                            <h3 class="h5 card-title fw-semibold texto-dorado">Licores 100% Originales</h3>
+                            <p class="card-text texto-suave small">Sello de garantía en cada botella: Ron Viejo de Caldas y Aguardiente Antioqueño auténticos.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card h-100 bg-tarjeta borde-marca rounded-4">
+                        <div class="card-body">
+                            <div class="fs-2 mb-2">⚡</div>
+                            <h3 class="h5 card-title fw-semibold texto-dorado">Hidratación y Energía</h3>
+                            <p class="card-text texto-suave small">Variedad en Electrolit, Gatorade y Agua Cielo para antes, durante o después del festejo.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card h-100 bg-tarjeta borde-marca rounded-4">
+                        <div class="card-body">
+                            <div class="fs-2 mb-2">🛵</div>
+                            <h3 class="h5 card-title fw-semibold texto-dorado">Atención Rápida en Manrique</h3>
+                            <p class="card-text texto-suave small">Pide directo a tu mesa o para llevar con despacho ágil en nuestro sector.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card h-100 bg-tarjeta borde-marca rounded-4">
+                        <div class="card-body">
+                            <div class="fs-2 mb-2">🎵</div>
+                            <h3 class="h5 card-title fw-semibold texto-dorado">Ambiente Tradicional</h3>
+                            <p class="card-text texto-suave small">Música de despecho, salsa clásica y la mejor atmósfera para recordar y compartir.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card h-100 bg-tarjeta borde-marca rounded-4">
+                        <div class="card-body">
+                            <div class="fs-2 mb-2">🤝</div>
+                            <h3 class="h5 card-title fw-semibold texto-dorado">Precios Justos de Barrio</h3>
+                            <p class="card-text texto-suave small">Tarifas amigables con tu bolsillo para que celebres con amigos y familia sin pagar de más.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5" id="productos">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold texto-dorado">Nuestros Productos</h2>
+                <p class="texto-suave">Lo que no puede faltar en una buena noche de cantina.</p>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <article class="card h-100 bg-tarjeta borde-marca rounded-4 text-center p-3">
+                        <img src="https://tiendacommerkant.com.co/cdn/shop/files/Botella_Carta_de_Oro_2.jpg?v=1761601106" alt="Botella de Ron Viejo de Caldas" class="img-fluid img-producto mx-auto mb-3 rounded-3">
+                        <div class="card-body p-0">
+                            <h3 class="h5 card-title fw-semibold">Ron Viejo de Caldas</h3>
+                            <p class="card-text texto-suave small">El sabor tradicional de los rones colombianos.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card h-100 bg-tarjeta borde-marca rounded-4 text-center p-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaxpQIQ_muwNmosxeppjHmyp-tg84aBqDVAubzADyq0g&s=10" alt="Botella de Aguardiente Antioqueño" class="img-fluid img-producto mx-auto mb-3 rounded-3">
+                        <div class="card-body p-0">
+                            <h3 class="h5 card-title fw-semibold">Aguardiente Antioqueño</h3>
+                            <p class="card-text texto-suave small">Tapa azul y tapa roja, la tradición paisa infaltable.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card h-100 bg-tarjeta borde-marca rounded-4 text-center p-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxQjHP25kqMHj0-HWefGfqjf3gKwETMRB_GPb7U7eUkOQeX7v1dj5yIXg&s=10" alt="Cerveza Pilsen bien fría" class="img-fluid img-producto mx-auto mb-3 rounded-3">
+                        <div class="card-body p-0">
+                            <h3 class="h5 card-title fw-semibold">Cerveza Pilsen</h3>
+                            <p class="card-text texto-suave small">La rubia tradicional que alegra cualquier conversación.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card h-100 bg-tarjeta borde-marca rounded-4 text-center p-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa9HzXcSaU1ooH0hxEjf7jlEn5A-h7G7ToGhq4Pz0Isw&s=10" alt="Cerveza Águila Night" class="img-fluid img-producto mx-auto mb-3 rounded-3">
+                        <div class="card-body p-0">
+                            <h3 class="h5 card-title fw-semibold">Águila Night</h3>
+                            <p class="card-text texto-suave small">Refrescante con ese toque extra para la noche.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card h-100 bg-tarjeta borde-marca rounded-4 text-center p-3">
+                        <img src="https://product-images.farmatodo.com/oIgdzO3_dK4QISqb4N-jGVQL0c_FJbSbr4wdMsiq1UpYpFt_0NyvRzSVfcL-VxZwz8J0WIqvpjNnEkznY7PzgPFevPmrzPFpZ3cv5uX6K6vyDDl1" alt="Botella de Gatorade y Electrolit" class="img-fluid img-producto mx-auto mb-3 rounded-3">
+                        <div class="card-body p-0">
+                            <h3 class="h5 card-title fw-semibold">Gatorade &amp; Electrolit</h3>
+                            <p class="card-text texto-suave small">Rehidratación garantizada y energía al instante.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="card h-100 bg-tarjeta borde-marca rounded-4 text-center p-3">
+                        <img src="https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=500&q=80" alt="Botella de Agua Cielo" class="img-fluid img-producto mx-auto mb-3 rounded-3">
+                        <div class="card-body p-0">
+                            <h3 class="h5 card-title fw-semibold">Agua Cielo</h3>
+                            <p class="card-text texto-suave small">Agua pura tratada para refrescarte siempre.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5" id="como-pedir">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold texto-dorado">¿Cómo pedir?</h2>
+                <p class="texto-suave">Sigue estos sencillos pasos y disfruta en minutos de tu pedido.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <div class="bg-superficie borde-marca rounded-4 p-4">
+                        <ol class="list-unstyled m-0 d-flex flex-column gap-3">
+                            <li class="d-flex align-items-start gap-3">
+                                <span class="badge rounded-circle bg-acento p-2 px-3 fs-6">1</span>
+                                <div>
+                                    <strong class="texto-dorado d-block">Elige tus bebidas:</strong>
+                                    <p class="texto-suave small mb-0">Revisa nuestro menú de licores (Ron, Guaro), cervezas (Pilsen, Águila Night) o hidratantes (Electrolit, Gatorade, Agua Cielo).</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start gap-3">
+                                <span class="badge rounded-circle bg-acento p-2 px-3 fs-6">2</span>
+                                <div>
+                                    <strong class="texto-dorado d-block">Escríbenos por WhatsApp o visítanos:</strong>
+                                    <p class="texto-suave small mb-0">Haz clic en nuestro botón directo de WhatsApp o acércate a nuestra cantina en Manrique, Medellín.</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start gap-3">
+                                <span class="badge rounded-circle bg-acento p-2 px-3 fs-6">3</span>
+                                <div>
+                                    <strong class="texto-dorado d-block">Confirma cantidades y ubicación:</strong>
+                                    <p class="texto-suave small mb-0">Indícanos si recoges en barra o tu dirección exacta en el sector de Manrique.</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-start gap-3">
+                                <span class="badge rounded-circle bg-acento p-2 px-3 fs-6">4</span>
+                                <div>
+                                    <strong class="texto-dorado d-block">¡Recibe y brinda por los recuerdos!:</strong>
+                                    <p class="texto-suave small mb-0">Paga en efectivo o transferencia (Nequi / Bancolombia) y disfruta tus bebidas bien frías.</p>
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container py-5" id="contacto">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold texto-dorado">Reserva tu mesa o haz tu pedido</h2>
+                <p class="texto-suave">Déjanos tus datos y te respondemos rápido en el sector de Manrique.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <form class="bg-superficie borde-marca rounded-4 p-4 needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control bg-tarjeta borde-marca" id="nombre" placeholder="Ej. Carlos Pérez" required>
+                            <div class="invalid-feedback">Por favor escribe tu nombre.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">WhatsApp o celular</label>
+                            <input type="tel" class="form-control bg-tarjeta borde-marca" id="telefono" placeholder="Ej. 300 123 4567" pattern="[0-9\s+]{10,15}" required>
+                            <div class="invalid-feedback">Ingresa un número de celular válido (mínimo 10 dígitos).</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">¿Qué deseas pedir o reservar?</label>
+                            <textarea class="form-control bg-tarjeta borde-marca" id="mensaje" rows="3" placeholder="Ej. Una botella de Ron Viejo de Caldas y 4 Pilsen bien frías..." required></textarea>
+                            <div class="invalid-feedback">Cuéntanos qué bebida o reserva necesitas.</div>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-marca rounded-pill py-2 fw-semibold">
+                                Enviar solicitud
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-footer borde-superior pt-5 pb-3 mt-4">
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-12 col-md-6">
+                    <h3 class="h5 fw-bold texto-dorado">Cantina Los Recuerdos de Ella</h3>
+                    <p class="texto-suave small mb-1">El punto de encuentro tradicional de Manrique para brindar con amigos.</p>
+                    <p class="texto-suave small mb-0">📍 Sector Manrique &bull; Medellín, Antioquia</p>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <h3 class="h5 fw-bold texto-dorado">Canales de Atención</h3>
+                    <ul class="list-unstyled texto-suave small d-flex flex-column gap-1 mb-0">
+                        <li>📱 <strong>WhatsApp:</strong> <a href="https://wa.me/573001234567" class="texto-dorado text-decoration-none" target="_blank">+57 300 123 4567</a></li>
+                        <li>📷 <strong>Instagram:</strong> <a href="https://instagram.com/cantina_losrecuerdosdeella" class="texto-dorado text-decoration-none" target="_blank">@cantina_losrecuerdosdeella</a></li>
+                        <li>🕒 <strong>Horario:</strong> Todos los días de 2:00 p.m. a 2:00 a.m.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="text-center borde-superior pt-3 texto-copy small">
+                <p class="mb-0">&copy; 2026 Cantina Los Recuerdos de Ella &bull; Manrique, Medellín &bull; El exceso de alcohol es perjudicial para la salud.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Nivel extra: Modal de Bootstrap -->
+    <div class="modal fade" id="modalPromo" tabindex="-1" aria-labelledby="modalPromoTitulo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-superficie borde-marca rounded-4">
+                <div class="modal-header borde-inferior">
+                    <h2 class="modal-title fs-5 fw-bold texto-dorado" id="modalPromoTitulo">🔥 Combo Pa' Recordar</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-2">Todos los viernes y sábados hasta las 10:00 p.m.:</p>
+                    <p class="fw-semibold texto-dorado mb-2">1 Botella de Aguardiente Antioqueño + 2 Electrolit + hielo gratis.</p>
+                    <p class="texto-suave small mb-0">Válido para consumo en barra o domicilio en el sector de Manrique.</p>
+                </div>
+                <div class="modal-footer borde-superior">
+                    <button type="button" class="btn btn-secundario rounded-pill" data-bs-dismiss="modal">Cerrar</button>
+                    <a href="https://wa.me/573001234567" class="btn btn-whatsapp rounded-pill" target="_blank">💬 Pedir promo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const formularios = document.querySelectorAll('.needs-validation');
+        formularios.forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    </script>
+</body>
+</html>
