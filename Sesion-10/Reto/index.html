@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Guía de Estilos - Kit de Componentes</title>
+  <link rel="stylesheet" href="kit.css">
+</head>
+<body>
+
+  <main class="tarjeta" style="max-width: 800px; margin: 0 auto;">
+    <header style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+      <h1>Mi Guía de Estilos</h1>
+    </header>
+
+    <!-- 1. PALETA DE COLORES -->
+    <section>
+      <h2>1. Paleta de Colores (Variables)</h2>
+      <div class="muestras">
+        <div class="muestra muestra-principal"><span>--principal</span></div>
+        <div class="muestra muestra-peligro"><span>--peligro</span></div>
+        <div class="muestra muestra-aviso"><span>--aviso</span></div>
+        <div class="muestra muestra-info"><span>--info</span></div>
+        <div class="muestra muestra-texto"><span>--texto</span></div>
+      </div>
+    </section>
+
+    <hr style="margin: 2rem 0; border: 1px solid var(--borde);">
+
+    <!-- 2. BOTONES -->
+    <section>
+      <h2>2. Botones</h2>
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <button class="boton">Principal</button>
+        <button class="boton boton-secundario">Secundario</button>
+        <button class="boton boton-peligro">Peligro</button>
+        <button class="boton" disabled>Deshabilitado</button>
+      </div>
+    </section>
+
+    <hr style="margin: 2rem 0; border: 1px solid var(--borde);">
+
+    <!-- 3. ALERTAS -->
+    <section>
+      <h2>3. Alertas</h2>
+      <p class="alerta alerta-exito">✅ <strong>Éxito:</strong> Los datos se guardaron correctamente.</p>
+      <p class="alerta alerta-error">⚠️ <strong>Error:</strong> No se pudo conectar a la base de datos.</p>
+      <p class="alerta alerta-aviso">⚡ <strong>Aviso:</strong> Tu contraseña caduca en 3 días.</p>
+      <p class="alerta alerta-info">ℹ️ <strong>Info:</strong> Hay una nueva actualización disponible.</p>
+    </section>
+
+    <hr style="margin: 2rem 0; border: 1px solid var(--borde);">
+
+    <!-- 4. INSIGNIAS -->
+    <section>
+      <h2>4. Insignias</h2>
+      <div style="display: flex; gap: 1rem;">
+        <span class="insignia insignia-nuevo">Nuevo</span>
+        <span class="insignia insignia-oferta">Oferta</span>
+        <span class="insignia insignia-agotado">Agotado</span>
+      </div>
+    </section>
+
+    <hr style="margin: 2rem 0; border: 1px solid var(--borde);">
+
+    <!-- 5. ESTADOS -->
+    <section>
+      <h2>5. Estados</h2>
+      
+      <div style="margin-bottom: 1.5rem;">
+        <h3>Cargando</h3>
+        <span class="cargando">Procesando pago...</span>
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <h3>Tarea Hecha</h3>
+        <p class="hecha">☑ Terminar el maquetado del dashboard de Los Recuerdos de Ella</p>
+      </div>
+
+      <div style="max-width: 400px;">
+        <h3>Formulario con Error</h3>
+        <label for="email" class="oculto-visual">Correo Electrónico</label>
+        <input type="email" id="email" class="error" placeholder="tu@correo.com" value="correo-invalido">
+        <small class="error">El formato del correo no es válido.</small>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
