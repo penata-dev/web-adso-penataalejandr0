@@ -1,383 +1,666 @@
-/*
-    CONCEPTO: MOBILE FIRST
-    ¿Qué es Mobile First?
-    Es una técnica de diseño web donde escribimos primero los estilos para pantallas
-    pequeñas (celulares) como base principal sin ninguna condición. Después,
-    usando reglas @media con 'min-width', vamos ampliando y adaptando los estilos
-    progresivamente para pantallas más grandes como tabletas y computadores.
- */
+/* ==========================================================================
+   HUNGRY TIGER — COMPLETE STYLESHEET (styles.css)
+   Theme: Dark ("Turmeric-bright graffiti on a tandoor wall")
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@400;500;700&family=Inter:wght@400;500;700&display=swap');
 
 :root {
-    --fondo: #120e0b;
-    --superficie: #1c1511;
-    --tarjeta: #241c16;
-    --borde: #3b281c;
-    --texto: #f4efe6;
-    --texto-suave: #baa999;
-    --acento: #d97706;
-    --dorado: #fbbf24;
-    --whatsapp: #25d366;
-    --radio: 12px;
+  /* Colors */
+  --color-tiger-gold: #faae33;
+  --color-ember-rust: #823513;
+  --color-saffron-glow: #9f531b;
+  --color-dark-spice: #402011;
+  --color-charred-clove: #281006;
+  --color-cardamom-brown: #6b2e12;
+  --color-chili-red: #d1255c;
+
+  /* Typography — Font Families */
+  --font-salmond: 'Salmond', 'Antonio', 'Druk Wide', 'Bebas Neue', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-graphikx: 'Graphikx', 'Inter', 'Geist', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Typography — Scale */
+  --text-caption: 11px;
+  --leading-caption: 1.2;
+  --tracking-caption: 0.02em;
+  --text-micro: 13px;
+  --leading-micro: 1.25;
+  --tracking-micro: 0.01em;
+  --text-subheading: 18px;
+  --leading-subheading: 1.2;
+  --tracking-subheading: 0.01em;
+  --text-heading-sm: 29px;
+  --leading-heading-sm: 1.1;
+  --tracking-heading-sm: -0.005em;
+  --text-heading: 65px;
+  --leading-heading: 0.95;
+  --tracking-heading: -0.01em;
+  --text-heading-lg: 101px;
+  --leading-heading-lg: 0.9;
+  --tracking-heading-lg: -0.016em;
+  --text-display: 195px;
+  --leading-display: 0.8;
+  --tracking-display: -0.02em;
+
+  /* Typography — Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Spacing */
+  --spacing-4: 4px;
+  --spacing-6: 6px;
+  --spacing-8: 8px;
+  --spacing-9: 9px;
+  --spacing-10: 10px;
+  --spacing-12: 12px;
+  --spacing-14: 14px;
+  --spacing-16: 16px;
+  --spacing-17: 17px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-26: 26px;
+  --spacing-28: 28px;
+  --spacing-32: 32px;
+  --spacing-42: 42px;
+  --spacing-192: 192px;
+
+  /* Layout */
+  --page-max-width: 1440px;
+  --section-gap: 96px;
+  --card-padding: 16px;
+  --element-gap: 10px;
+
+  /* Border Radius */
+  --radius-md: 6px;
+  --radius-full: 1080px;
+  --radius-full-2: 1152px;
+  --radius-full-3: 1224px;
+  --radius-full-4: 1296px;
+  --radius-cards: 6px;
+  --radius-badges: 9999px;
+  --radius-inputs: 9999px;
+  --radius-buttons: 9999px;
+
+  /* Surfaces */
+  --surface-tandoor-canvas: #823513;
+  --surface-spice-card: #402011;
+  --surface-charred-core: #281006;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+/* ==========================================================================
+   BASE & TANDOOR CANVAS (#823513)
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  background-color: var(--color-ember-rust);
+  color: var(--color-tiger-gold);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
-    background-color: var(--fondo);
-    color: var(--texto);
-    font-family: "Poppins", Arial, sans-serif;
-    line-height: 1.6;
-    overflow-x: hidden;
+  margin: 0;
+  background-color: var(--color-ember-rust) !important;
+  color: var(--color-tiger-gold);
+  font-family: var(--font-graphikx);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-subheading);
+  line-height: 1.35;
+  overflow-x: hidden;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
 }
 
 a {
-    color: var(--dorado);
-    text-decoration: none;
+  color: var(--color-tiger-gold);
+  text-decoration: none;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 
-.contenedor {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    animation: aparecer 1s ease-out;
+a:hover {
+  color: var(--color-charred-clove);
+}
+
+/* ==========================================================================
+   LAYOUT & DOTTED HORIZONTAL RULES
+   ========================================================================== */
+.container {
+  max-width: var(--page-max-width);
 }
 
 .seccion-espaciada {
-    padding: 3rem 0;
+  padding-top: var(--section-gap);
+  padding-bottom: var(--section-gap);
+  border-bottom: 1px dotted var(--color-tiger-gold);
 }
 
-.seccion-titulo {
-    text-align: center;
-    margin-bottom: 2rem;
+.seccion-espaciada:last-of-type {
+  border-bottom: none;
 }
 
-.seccion-titulo h2 {
-    font-size: 1.8rem;
-    color: var(--dorado);
+.borde-inferior,
+.border-bottom-dotted {
+  border-bottom: 1px dotted var(--color-tiger-gold) !important;
 }
 
-.seccion-titulo p {
-    color: var(--texto-suave);
-    font-size: 0.95rem;
+.borde-superior,
+.border-top-dotted {
+  border-top: 1px dotted var(--color-tiger-gold) !important;
 }
 
-.encabezado {
-    background-color: var(--superficie);
-    border-bottom: 1px solid var(--borde);
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    position: absolute;
-    top: 0;
-    position: sticky;
-    z-index: 10;
+.borde-marca {
+  border: 1px solid var(--color-cardamom-brown) !important;
 }
 
-.logo {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--dorado);
+/* ==========================================================================
+   POSTER-SCALE TYPOGRAPHY (SALMOND DISPLAY + GRAPHIKX MICRO-COPY)
+   ========================================================================== */
+h1,
+.display-5 {
+  font-family: var(--font-salmond);
+  font-weight: var(--font-weight-bold) !important;
+  font-size: clamp(3.5rem, 8.5vw, var(--text-heading-lg));
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--color-tiger-gold) !important;
 }
 
-.menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.6rem;
-    list-style: none;
+h2 {
+  font-family: var(--font-salmond);
+  font-weight: var(--font-weight-bold) !important;
+  font-size: clamp(2.5rem, 5.5vw, var(--text-heading));
+  line-height: 0.9;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  color: var(--color-tiger-gold) !important;
 }
 
-.menu a {
-    color: var(--texto);
-    font-size: 0.95rem;
-    padding: 0.3rem 0.6rem;
+h3,
+.h5 {
+  font-family: var(--font-salmond);
+  font-weight: var(--font-weight-bold) !important;
+  font-size: var(--text-heading-sm);
+  line-height: var(--leading-heading-sm);
+  letter-spacing: var(--tracking-heading-sm);
+  text-transform: uppercase;
+  color: var(--color-tiger-gold) !important;
 }
 
-.hero {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 2.5rem 1rem;
-    text-align: center;
-    align-items: center;
-    animation: aparecer 1s ease-out;
+.texto-dorado,
+.text-tiger-gold {
+  color: var(--color-tiger-gold) !important;
 }
 
-.insignia-hero {
-    display: inline-block;
-    background-color: var(--tarjeta);
-    border: 1px solid var(--acento);
-    color: var(--dorado);
-    font-size: 0.85rem;
-    padding: 0.25rem 0.75rem;
-    border-radius: 999px;
-    margin-bottom: 0.75rem;
+.texto-suave {
+  font-family: var(--font-graphikx);
+  font-weight: var(--font-weight-medium);
+  font-size: 15px;
+  line-height: 1.35;
+  color: var(--color-tiger-gold) !important;
+  opacity: 0.88;
 }
 
-.hero h1 {
-    font-size: 2rem;
-    line-height: 1.2;
-    margin-bottom: 0.8rem;
+.eyebrow-mono,
+.etiqueta-mono {
+  font-family: var(--font-salmond);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-caption);
+  line-height: var(--leading-caption);
+  letter-spacing: var(--tracking-caption);
+  text-transform: uppercase;
+  color: var(--color-tiger-gold);
 }
 
-.frase-hero {
-    color: var(--texto-suave);
-    margin-bottom: 1.5rem;
+/* Heat-level & status indicators */
+.indicador-dato {
+  display: inline-block;
+  font-family: var(--font-salmond);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-caption);
+  line-height: var(--leading-caption);
+  letter-spacing: var(--tracking-caption);
+  text-transform: uppercase;
+  background-color: var(--color-charred-clove);
+  color: var(--color-tiger-gold);
+  border-radius: var(--radius-badges);
+  padding: var(--spacing-4) var(--spacing-12);
 }
 
-.acciones-hero {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+.indicador-dato.positivo {
+  background-color: var(--color-chili-red);
+  color: var(--color-tiger-gold);
 }
 
-.boton {
-    display: inline-block;
-    padding: 0.8rem 1.4rem;
-    border-radius: 999px;
-    font-weight: 600;
-    font-size: 0.95rem;
+/* ==========================================================================
+   NAVIGATION BAR & PILL BADGES
+   ========================================================================== */
+.bg-superficie,
+.bg-footer {
+  background-color: var(--color-ember-rust) !important;
 }
 
-.boton-whatsapp {
-    background-color: var(--whatsapp);
-    color: #fff;
+.navbar {
+  background-color: var(--color-ember-rust) !important;
+  padding-top: var(--spacing-16);
+  padding-bottom: var(--spacing-16);
 }
 
-.boton-secundario {
-    background-color: var(--tarjeta);
-    border: 1px solid var(--borde);
-    color: var(--texto);
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  font-family: var(--font-salmond);
+  font-weight: var(--font-weight-bold) !important;
+  font-size: var(--text-subheading);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--color-tiger-gold) !important;
+}
+
+.status-pulse {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-badges);
+  background-color: var(--color-tiger-gold);
+  margin-right: var(--spacing-6);
+  vertical-align: middle;
+  animation: spicePulse 2.4s ease-in-out infinite;
+}
+
+.navbar-toggler {
+  border-radius: var(--radius-buttons) !important;
+  border: 1px solid var(--color-tiger-gold) !important;
+}
+
+.navbar-toggler-icon {
+  filter: sepia(1) saturate(6) hue-rotate(355deg) brightness(1.1);
+}
+
+/* Ghost Outline Pill Nav Links */
+.nav-link {
+  font-family: var(--font-salmond);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-micro);
+  line-height: 1;
+  letter-spacing: var(--tracking-micro);
+  text-transform: uppercase;
+  color: var(--color-tiger-gold) !important;
+  background-color: transparent;
+  border: 1px solid var(--color-tiger-gold);
+  border-radius: var(--radius-full-4);
+  padding: var(--spacing-8) var(--spacing-17) !important;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: var(--color-tiger-gold) !important;
+  color: var(--color-charred-clove) !important;
+  transform: translateY(-1px);
+}
+
+.insignia-marca {
+  background-color: var(--color-dark-spice) !important;
+  color: var(--color-tiger-gold) !important;
+  font-family: var(--font-salmond);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-caption);
+  letter-spacing: var(--tracking-caption);
+  text-transform: uppercase;
+  border-radius: var(--radius-badges) !important;
+  padding: var(--spacing-6) var(--spacing-16) !important;
+  border: none !important;
+}
+
+/* ==========================================================================
+   BUTTONS — FULL PILLS (9999PX / 1296PX) WITHOUT SHADOWS
+   ========================================================================== */
+.btn {
+  font-family: var(--font-salmond);
+  font-weight: var(--font-weight-medium) !important;
+  font-size: var(--text-micro) !important;
+  line-height: 1 !important;
+  letter-spacing: var(--tracking-micro) !important;
+  text-transform: uppercase;
+  border-radius: var(--radius-full-4) !important;
+  box-shadow: none !important;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+/* Filled Primary CTA (#faae33 fill, #281006 text) */
+.btn-marca,
+.btn-whatsapp,
+.btn-oscuro-cta {
+  background-color: var(--color-tiger-gold) !important;
+  color: var(--color-charred-clove) !important;
+  border: 1px solid var(--color-tiger-gold) !important;
+  padding: var(--spacing-10) var(--spacing-20) !important;
+}
+
+.btn-marca:hover,
+.btn-whatsapp:hover,
+.btn-oscuro-cta:hover {
+  background-color: var(--color-charred-clove) !important;
+  color: var(--color-tiger-gold) !important;
+  border-color: var(--color-tiger-gold) !important;
+  transform: translateY(-1px);
+}
+
+/* Ghost Outline Button */
+.btn-secundario,
+.btn-borde-oscuro {
+  background-color: transparent !important;
+  color: var(--color-tiger-gold) !important;
+  border: 1px solid var(--color-tiger-gold) !important;
+  padding: var(--spacing-10) var(--spacing-20) !important;
+}
+
+.btn-secundario:hover,
+.btn-borde-oscuro:hover {
+  background-color: var(--color-tiger-gold) !important;
+  color: var(--color-charred-clove) !important;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   HERO PRODUCT SHOWCASE (RAW ON EMBER RUST CANVAS, NO CARD FRAME)
+   ========================================================================== */
+.marco-terminal {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  animation: posterFloat 8s ease-in-out infinite alternate;
+}
+
+.barra-terminal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--spacing-10);
+  margin-bottom: var(--spacing-10);
+  border-bottom: 1px dotted var(--color-tiger-gold);
+}
+
+.luces-terminal {
+  display: flex;
+  gap: var(--spacing-6);
+}
+
+.luces-terminal span {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-badges);
+  background-color: var(--color-tiger-gold);
+}
+
+.luces-terminal span:nth-child(2) {
+  background-color: var(--color-chili-red);
+}
+
+.luces-terminal span:nth-child(3) {
+  background-color: var(--color-dark-spice);
+}
+
+.titulo-terminal {
+  font-family: var(--font-salmond);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-caption);
+  letter-spacing: var(--tracking-caption);
+  text-transform: uppercase;
+  color: var(--color-tiger-gold);
 }
 
 .imagen-hero {
-    border-radius: var(--radio);
-    max-height: 320px;
-    width: 100%;
-    object-fit: cover;
+  border-radius: 0 !important;
+  object-fit: cover;
+  max-height: 410px;
+  border: 1px solid var(--color-cardamom-brown);
 }
 
-.beneficios, .grid-productos {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+/* ==========================================================================
+   SURFACE CARDS (6PX RADIUS, #402011 DARK SPICE, ZERO SHADOWS)
+   ========================================================================== */
+.bg-tarjeta,
+.tarjeta-clara,
+.panel-estructurado {
+  background-color: var(--color-dark-spice) !important;
+  color: var(--color-tiger-gold) !important;
+  border: none !important;
+  border-radius: var(--radius-cards) !important;
+  padding: var(--card-padding) !important;
+  box-shadow: none !important;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.beneficio, .tarjeta-producto {
-    background-color: var(--tarjeta);
-    border: 1px solid var(--borde);
-    padding: 1.25rem;
-    border-radius: var(--radio);
+.bg-tarjeta:hover,
+.tarjeta-clara:hover {
+  background-color: var(--color-charred-clove) !important;
+  transform: translateY(-2px);
 }
 
-.icono-beneficio {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+.bg-tarjeta .card-body {
+  padding: 0;
 }
 
-.beneficio h3 {
-    color: var(--dorado);
-    margin-bottom: 0.35rem;
+.tarjeta-clara .card-title {
+  color: var(--color-tiger-gold) !important;
 }
 
-.beneficio p, .desc-producto {
-    color: var(--texto-suave);
-    font-size: 0.9rem;
+.tarjeta-clara .card-text {
+  font-family: var(--font-graphikx);
+  font-size: var(--text-micro);
+  color: var(--color-tiger-gold) !important;
+  opacity: 0.85;
 }
 
-#agotado {
-    background-color:var(--dorado);
-    border-radius: 5px;
-    padding: 0.5px 5px ;
-    border: solid rgba(255, 0, 0, 0.189);
-    position: absolute;
-    text-align: right;
-    width: 35%;
-    height: 30px;
-    top: 0.5rem;
-    right: 5px;
-    color: #0b0907;
-}
-
-#promoc {
-    color: var(--dorado);
-}
-
-.whatsapp-flotante {
-    position: fixed;
-    right: 1rem;
-    bottom: 1rem;
-    z-index: 20;
-    display: grid;
-    place-items: center;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: #fff;
-    color: #ffffff;
-    font-size: 1.6rem;
-    text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-}
-
-
-.tarjeta-producto {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
+/* Isolated Product Photography against Dark Spice */
 .img-producto {
-    height: 140px;
-    width: auto;
-    object-fit: contain;
-    margin-bottom: 0.75rem;
-    border-radius: 8px;
-    margin-top: 50px;
-}
-
-.caja-pedidos {
-    background-color: var(--superficie);
-    border: 1px solid var(--borde);
-    border-radius: var(--radio);
-    padding: 1.5rem;
-    max-width: 750px;
-    margin: 0 auto;
-}
-
-.lista-pasos {
-    list-style: none;
-    counter-reset: paso;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-}
-
-.paso-item {
-    position: relative;
-    padding-left: 2.8rem;
-}
-
-.paso-item::before {
-    counter-increment: paso;
-    content: counter(paso);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 2rem;
-    height: 2rem;
-    background-color: var(--acento);
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-}
-
-.paso-item strong {
-    color: var(--dorado);
-    display: block;
-}
-
-.paso-item p {
-    color: var(--texto-suave);
-    font-size: 0.9rem;
-}
-
-.pie-pagina {
-    background-color: #0b0907;
-    border-top: 1px solid var(--borde);
-    padding: 2.5rem 1rem 1.5rem;
-    margin-top: 2rem;
-}
-
-.footer-contenido {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.footer-bloque h3 {
-    color: var(--dorado);
-    margin-bottom: 0.5rem;
-}
-
-.footer-bloque p, .lista-contacto li {
-    color: var(--texto-suave);
-    font-size: 0.9rem;
-}
-
-.lista-contacto {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-}
-
-.footer-copy {
-    text-align: center;
-    border-top: 1px solid var(--borde);
-    padding-top: 1rem;
-    color: #71665a;
-    font-size: 0.8rem;
-}
-
-.modal {
-    position: fixed;
-    inset: 0;                /* toda la pantalla */
-    z-index: 30;             /* encima de todo */
-    display: none;           /* escondida al inicio */
-    place-items: center;
-    padding: 1rem;
-    background-color: rgba(0, 0, 0, 0.6);
-    animation: aparecer 0.3s ease-out;
-}
-
-.modal:target { display: grid; }   /* cuando la dirección termina en #promo */
-
-.modal-caja {
-  position: relative;
   width: 100%;
-  max-width: 420px;
-  padding: 2rem;
-  border-radius: 16px;
-  background-color: var(--superficie);
+  height: 200px;
+  object-fit: contain;
+  background-color: transparent;
+  border-radius: 0 !important;
+  padding: var(--spacing-12);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.modal-cerrar {
+.tarjeta-clara:hover .img-producto {
+  transform: scale(1.04) rotate(-1deg);
+}
+
+/* Step Badges */
+.bg-acento {
+  background-color: var(--color-tiger-gold) !important;
+  color: var(--color-charred-clove) !important;
+  border-radius: var(--radius-badges) !important;
+  font-family: var(--font-salmond);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--text-caption);
+  letter-spacing: var(--tracking-caption);
+}
+
+/* ==========================================================================
+   PILL INPUT FIELDS & MODAL (CHARRED CLOVE #281006)
+   ========================================================================== */
+form.tarjeta-clara:hover {
+  background-color: var(--color-dark-spice) !important;
+  transform: none;
+}
+
+form.tarjeta-clara .form-label {
+  font-family: var(--font-salmond);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-caption);
+  letter-spacing: var(--tracking-caption);
+  text-transform: uppercase;
+  color: var(--color-tiger-gold);
+}
+
+.input-claro {
+  background-color: transparent !important;
+  color: var(--color-tiger-gold) !important;
+  border: 1px solid var(--color-cardamom-brown) !important;
+  border-radius: var(--radius-full-3) !important;
+  padding: var(--spacing-12) var(--spacing-20) !important;
+  font-family: var(--font-salmond);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-micro) !important;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease;
+}
+
+.input-claro::placeholder {
+  color: rgba(250, 174, 51, 0.6);
+}
+
+.input-claro:focus {
+  border-color: var(--color-tiger-gold) !important;
+  outline: none !important;
+}
+
+textarea.input-claro {
+  border-radius: 24px !important;
+}
+
+.modal-content.tarjeta-clara {
+  background-color: var(--color-charred-clove) !important;
+  border: 1px solid var(--color-tiger-gold) !important;
+  border-radius: var(--radius-cards) !important;
+  padding: var(--spacing-24) !important;
+}
+
+.modal-content.tarjeta-clara:hover {
+  background-color: var(--color-charred-clove) !important;
+  transform: none;
+}
+
+.modal-header .btn-close {
+  filter: sepia(1) saturate(6) hue-rotate(355deg) brightness(1.1);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.footer-heading {
+  font-family: var(--font-salmond);
+  font-weight: var(--font-weight-bold) !important;
+  font-size: var(--text-heading-sm);
+  letter-spacing: var(--tracking-heading-sm);
+  text-transform: uppercase;
+  color: var(--color-tiger-gold) !important;
+}
+
+.link-footer {
+  color: var(--color-tiger-gold);
+  border-bottom: 1px dotted var(--color-tiger-gold);
+}
+
+.link-footer:hover {
+  color: var(--color-charred-clove);
+  background-color: var(--color-tiger-gold);
+}
+
+.texto-copy {
+  font-family: var(--font-salmond);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--text-caption);
+  letter-spacing: var(--tracking-caption);
+  color: var(--color-tiger-gold);
+}
+
+/* ==========================================================================
+   BOTANICAL WATERMARK LAYER & MOTION SYSTEM (HUNGRY TIGER)
+   ========================================================================== */
+.ambient-particle-field {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.botanical-watermark {
   position: absolute;
-  top: 0.5rem;
-  right: 0.75rem;
-  font-size: 1.5rem;
-  color: var(--texto-suave);
-  text-decoration: none;
+  width: 240px;
+  height: 240px;
+  border: 1px solid var(--color-saffron-glow);
+  opacity: 0.14;
+  animation: botanicalSway 14s ease-in-out infinite alternate;
 }
 
-@keyframes aparecer {
+.botanical-watermark--fern {
+  border-radius: 100% 0 100% 0;
+  transform: rotate(15deg);
+}
+
+.botanical-watermark--leaf {
+  width: 190px;
+  height: 190px;
+  border-radius: 0 100% 0 100%;
+  animation-duration: 18s;
+  animation-delay: -4s;
+}
+
+.botanical-watermark--floral {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border-style: dotted;
+  border-color: var(--color-tiger-gold);
+  opacity: 0.12;
+  animation-duration: 22s;
+  animation-delay: -8s;
+}
+
+@keyframes spicePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.65;
+  }
+}
+
+@keyframes posterFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes botanicalSway {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(12deg) scale(0.98);
+  }
+  50% {
+    transform: translate3d(8px, -10px, 0) rotate(18deg) scale(1.02);
+  }
+  100% {
+    transform: translate3d(-6px, 6px, 0) rotate(14deg) scale(1);
+  }
+}
+
+@keyframes fadeInPoster {
   from {
     opacity: 0;
-    transform: translateY(10px); /* Opcional: añade un leve deslizamiento */
+    transform: translateY(14px);
   }
   to {
     opacity: 1;
@@ -385,34 +668,15 @@ a {
   }
 }
 
-@media (min-width: 768px) {
-    .encabezado {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem 2rem;
-    }
-
-    .menu {
-        flex-direction: row;
-        gap: 1.2rem;
-    }
-
-    .hero {
-        grid-template-columns: 1fr 1fr;
-        text-align: left;
-    }
-
-    .acciones-hero {
-        flex-direction: row;
-    }
-
-    .beneficios, .grid-productos, .footer-contenido {
-        grid-template-columns: repeat(2, 1fr);
-    }
+.animate-float-in {
+  animation: fadeInPoster 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-@media (min-width: 1024px) {
-    .beneficios, .grid-productos {
-        grid-template-columns: repeat(3, 1fr);
-    }
+@media (prefers-reduced-motion: reduce) {
+  .marco-terminal,
+  .botanical-watermark,
+  .status-pulse,
+  .animate-float-in {
+    animation: none !important;
+  }
 }
