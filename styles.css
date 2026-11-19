@@ -5,195 +5,409 @@ usando los estilos base, y luego voy adaptando o escalando mi diseño para panta
 más pequeño hacia lo más grande para asegurar que mi sitio tenga un mejor rendimiento.
 */
 
-*{
+:root {
+  /* Colors */
+  --color-near-black: #090909;
+  --color-almost-white: #f7f9fa;
+  --color-soft-white: #f0f0f0;
+  --color-steel: #828384;
+  --color-graphite: #474747;
+  --color-iron: #423738;
+  --color-ash: #6b6b6b;
+  --color-signal-violet: #af50ff;
+  --color-lavender-mist: #e1bdff;
+
+  /* Typography — Font Families */
+  --font-whyte-inktrap: 'Whyte Inktrap', 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-whyte-inktrap-mono: 'Whyte Inktrap Mono', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-grandslang: 'GrandSlang', 'Lora', Georgia, serif;
+
+  /* Typography — Scale */
+  --text-caption: 10px;
+  --leading-caption: 1;
+  --tracking-caption: 0.18em;
+  --text-body-sm: 14px;
+  --leading-body-sm: 1.5;
+  --tracking-body-sm: 0px;
+  --text-body: 16px;
+  --leading-body: 1.5;
+  --tracking-body: 0px;
+  --text-subheading: 20px;
+  --leading-subheading: 1.2;
+  --tracking-subheading: -0.01em;
+  --text-heading-sm: 32px;
+  --leading-heading-sm: 1.2;
+  --tracking-heading-sm: -0.02em;
+  --text-heading: 48px;
+  --leading-heading: 1.2;
+  --tracking-heading: -0.03em;
+  --text-heading-lg: 64px;
+  --leading-heading-lg: 1.2;
+  --tracking-heading-lg: -0.04em;
+  --text-section-stamp: 74px;
+  --leading-section-stamp: 0.9;
+  --tracking-section-stamp: 0.2em;
+  --text-display: 88px;
+  --leading-display: 0.9;
+  --tracking-display: -0.03em;
+
+  /* Typography — Weights */
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Spacing */
+  --spacing-unit: 4px;
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
+  --spacing-72: 72px;
+  --spacing-80: 80px;
+  --spacing-96: 96px;
+  --spacing-128: 128px;
+
+  /* Layout */
+  --page-max-width: 1200px;
+  --section-gap: 120px;
+  --card-padding: 40px;
+  --element-gap: 16px;
+
+  /* Border Radius */
+  --radius-cards: 19.2px;
+  --radius-pills: 1584px;
+  --radius-buttons: 8px;
+  --radius-smallcontrols: 6px;
+
+  /* Shadows */
+  --shadow-subtle: rgba(16, 24, 40, 0.05) 0px 1px 2px 0px;
+
+  /* Surfaces */
+  --surface-void-canvas: #090909;
+  --surface-translucent-panel: rgba(51, 50, 72, 0.7);
+  --surface-boarding-wash: rgba(237, 195, 196, 0.05);
+  --surface-iron-wash: #423738;
+  --surface-violet-bloom: #af50ff;
+}
+
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  background-color: var(--color-near-black);
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Poppins", Arial, sans-serif;
-  background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
-  color: #1e293b;
+  font-family: var(--font-whyte-inktrap);
+  background-color: var(--color-near-black);
+  color: var(--color-almost-white);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--text-body);
+  line-height: var(--leading-body);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 .encabezado {
   text-align: center;
-  padding: 3rem 1.5rem 2rem;
-  background-color: #ffffff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: var(--spacing-80) var(--spacing-24) var(--spacing-64);
+  background: radial-gradient(ellipse 70% 55% at 50% 0%, rgba(175, 80, 255, 0.16) 0%, rgba(51, 50, 72, 0.22) 45%, var(--color-near-black) 100%);
+  border-bottom: 1px solid rgba(247, 249, 250, 0.14);
+  box-shadow: var(--shadow-subtle);
+  animation: fadeInTerminal 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .avatar-header {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 1rem;
+  width: 112px;
+  height: 112px;
+  margin: 0 auto var(--spacing-24);
   border-radius: 50%;
-  background-color: #dcfce7;
+  overflow: hidden;
+  border: 2px solid rgba(247, 249, 250, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 46px;
-  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.2);
+  animation: violetBeacon 5s ease-in-out infinite;
+}
+
+.foto-perfil {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
 }
 
 .titulo-principal {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #0f172a;
-  margin-bottom: 0.5rem;
+  font-family: var(--font-grandslang);
+  font-style: italic;
+  font-weight: var(--font-weight-regular);
+  font-feature-settings: "liga" on, "dlig" on;
+  font-size: clamp(2.8rem, 7.5vw, var(--text-display));
+  line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
+  color: var(--color-almost-white);
+  margin-bottom: var(--spacing-20);
 }
 
 .frase-personal {
   max-width: 650px;
-  margin: 0 auto 1.25rem;
-  font-size: 1.05rem;
-  color: #475569;
-  line-height: 1.6;
+  margin: 0 auto var(--spacing-32);
+  font-family: var(--font-whyte-inktrap);
+  font-size: var(--text-subheading);
+  font-weight: var(--font-weight-light);
+  color: rgba(247, 249, 250, 0.78);
+  line-height: 1.5;
+  letter-spacing: var(--tracking-subheading);
 }
 
 .info-meta {
   display: flex;
   justify-content: center;
-  gap: 0.75rem;
+  gap: var(--spacing-12);
   flex-wrap: wrap;
 }
 
 .badge {
-  background-color: #f1f5f9;
-  color: #334155;
-  padding: 0.35rem 0.85rem;
-  border-radius: 999px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  border: 1px solid #cbd5e1;
+  background-color: var(--surface-boarding-wash);
+  color: var(--color-almost-white);
+  padding: var(--spacing-8) var(--spacing-20);
+  border-radius: var(--radius-pills);
+  font-family: var(--font-whyte-inktrap);
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border: 1px solid rgba(247, 249, 250, 0.2);
+  backdrop-filter: blur(10px);
+  transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
+}
+
+.badge:hover {
+  border-color: var(--color-almost-white);
+  background-color: rgba(247, 249, 250, 0.1);
+  transform: translateY(-2px);
 }
 
 .contenedor-principal {
-  max-width: 1100px;
+  max-width: var(--page-max-width);
   width: 100%;
-  margin: 2.5rem auto;
-  padding: 0 1.5rem;
+  margin: var(--spacing-96) auto var(--section-gap);
+  padding: 0 var(--spacing-24);
   flex: 1;
 }
 
 .subtitulo-seccion {
   text-align: center;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #1e293b;
-  margin-bottom: 2rem;
-  letter-spacing: -0.02rem;
+  font-family: var(--font-whyte-inktrap-mono);
+  font-feature-settings: "ss01" on;
+  font-size: clamp(1.4rem, 3.8vw, 42px);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--leading-section-stamp);
+  letter-spacing: var(--tracking-section-stamp);
+  text-transform: uppercase;
+  color: var(--color-soft-white);
+  margin-bottom: var(--spacing-64);
 }
 
 .grid-retos {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.75rem;
+  gap: var(--spacing-24);
+  animation: fadeInTerminal 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .tarjeta-reto {
-  background-color: #ffffff;
-  padding: 2rem 1.5rem;
+  background-color: var(--surface-boarding-wash);
+  padding: var(--card-padding) var(--spacing-32);
   margin: 0;
-  border-radius: 1rem;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-cards);
+  border: 1px solid rgba(247, 249, 250, 0.14);
+  box-shadow: 0 0 0 rgba(175, 80, 255, 0);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .tarjeta-reto:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  border-color: rgba(175, 80, 255, 0.65);
+  background-color: rgba(175, 80, 255, 0.06);
+  box-shadow: 0 0 22px rgba(175, 80, 255, 0.28), 0 0 44px rgba(175, 80, 255, 0.14);
 }
 
+/* Violet Bloom Card (Racionado a la única tarjeta destacada) */
 .tarjeta-reto.destacada {
-  border: 2px solid #22c55e;
+  background: radial-gradient(circle at top right, var(--color-signal-violet) 0%, #6a21b8 60%, #2a0d4d 100%);
+  border: 1px solid rgba(225, 189, 255, 0.45);
   position: relative;
 }
 
+.tarjeta-reto.destacada:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-lavender-mist);
+  box-shadow: 0 0 28px rgba(175, 80, 255, 0.45), 0 0 56px rgba(225, 189, 255, 0.2);
+}
+
 .icono-reto {
-  font-size: 2.2rem;
-  margin-bottom: 0.75rem;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-smallcontrols);
+  background-color: rgba(247, 249, 250, 0.06);
+  border: 1px solid rgba(247, 249, 250, 0.16);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  margin-bottom: var(--spacing-20);
+}
+
+.tarjeta-reto.destacada .icono-reto {
+  background-color: rgba(9, 9, 9, 0.28);
+  border-color: rgba(247, 249, 250, 0.35);
 }
 
 .etiqueta-sesion {
   display: inline-block;
-  background-color: #e0f2fe;
-  color: #0369a1;
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-family: var(--font-whyte-inktrap-mono);
+  background-color: transparent;
+  color: #fff;
+  font-size: var(--text-caption);
+  font-weight: var(--font-weight-regular);
   text-transform: uppercase;
-  letter-spacing: 0.05rem;
-  padding: 0.25rem 0.6rem;
-  border-radius: 6px;
-  margin-bottom: 0.75rem;
+  letter-spacing: var(--tracking-caption);
+  padding: var(--spacing-4) var(--spacing-12);
+  border-radius: var(--radius-smallcontrols);
+  border: 1px solid rgba(247, 249, 250, 0.16);
+  margin-bottom: var(--spacing-16);
 }
 
 .tarjeta-reto.destacada .etiqueta-sesion {
-  background-color: #dcfce7;
-  color: #15803d;
+  color: var(--color-almost-white);
+  background-color: rgba(9, 9, 9, 0.25);
+  border-color: rgba(247, 249, 250, 0.4);
 }
 
 .titulo-reto {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: #0f172a;
-  margin-bottom: 0.65rem;
-  line-height: 1.35;
+  font-family: var(--font-whyte-inktrap);
+  font-size: 22px;
+  font-weight: var(--font-weight-light);
+  color: var(--color-almost-white);
+  margin-bottom: var(--spacing-12);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
 }
 
 .descripcion-reto {
-  font-size: 0.9rem;
-  color: #64748b;
-  line-height: 1.5;
-  margin-bottom: 1.5rem;
+  font-family: var(--font-whyte-inktrap);
+  font-size: var(--text-body-sm);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-steel);
+  line-height: var(--leading-body-sm);
+  margin-bottom: var(--spacing-24);
   flex: 1;
+}
+
+.tarjeta-reto.destacada .descripcion-reto {
+  color: var(--color-lavender-mist);
 }
 
 .boton-ver {
   display: inline-block;
   width: 100%;
   text-align: center;
-  padding: 0.7rem 1rem;
-  background-color: #0f172a;
-  color: #ffffff;
+  padding: var(--spacing-12) var(--spacing-16);
+  background-color: var(--color-near-black);
+  color: var(--color-almost-white);
   text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 600;
-  border-radius: 8px;
-  transition: background-color 0.2s ease, transform 0.15s ease;
+  font-family: var(--font-whyte-inktrap);
+  font-size: var(--text-body-sm);
+  font-weight: var(--font-weight-regular);
+  border-radius: var(--radius-buttons);
+  border: 1px solid rgba(247, 249, 250, 0.65);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
 }
 
-.boton-ver:hover {
-  background-color: #1e293b;
+.boton-ver:hover,
+.boton-ver:focus-visible {
+  background-color: var(--color-almost-white);
+  color: var(--color-near-black);
+  border-color: var(--color-almost-white);
+  outline: none;
 }
 
 .tarjeta-reto.destacada .boton-ver {
-  background-color: #16a34a;
+  background-color: var(--color-near-black);
+  color: var(--color-almost-white);
+  border-radius: var(--radius-pills);
+  border: 1px solid var(--color-almost-white);
 }
 
 .tarjeta-reto.destacada .boton-ver:hover {
-  background-color: #15803d;
+  background-color: var(--color-almost-white);
+  color: var(--color-near-black);
 }
 
 .pie-pagina {
   text-align: center;
-  padding: 1.5rem;
-  background-color: #ffffff;
-  border-top: 1px solid #e2e8f0;
-  color: #64748b;
-  font-size: 0.85rem;
+  padding: var(--spacing-32) var(--spacing-24);
+  background-color: var(--color-near-black);
+  border-top: 1px solid rgba(247, 249, 250, 0.14);
+  color: var(--color-ash);
+  font-family: var(--font-whyte-inktrap-mono);
+  font-size: var(--text-body-sm);
+  letter-spacing: 0.04em;
+}
+
+@keyframes violetBeacon {
+  0%, 100% {
+    border-color: rgba(247, 249, 250, 0.3);
+    box-shadow: 0 0 0 rgba(175, 80, 255, 0);
+  }
+  50% {
+    border-color: rgba(175, 80, 255, 0.85);
+    box-shadow: 0 0 20px rgba(175, 80, 255, 0.3);
+  }
+}
+
+@keyframes fadeInTerminal {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (min-width: 768px) {
   .grid-retos {
     grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-32);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .encabezado,
+  .avatar-header,
+  .grid-retos {
+    animation: none !important;
+    transition: none !important;
   }
 }
